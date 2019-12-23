@@ -1,0 +1,13 @@
+server:
+  port: ${SERVER_PORT:8884}
+
+spring:
+  application:
+    name: flower-zipkin-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8881}
+      config:
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8881}
+        file-extension: yml

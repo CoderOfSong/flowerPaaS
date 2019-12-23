@@ -1,0 +1,9 @@
+rootProject.name = 'flowerPaaS'
+
+include 'flower-common'
+include 'flower-gateway'
+include 'flower-admin'
+include 'flower-zipkin'
+include 'flower-competence-server'
+include 'flower-auth-server'
+
