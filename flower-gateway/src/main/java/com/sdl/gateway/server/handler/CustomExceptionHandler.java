@@ -1,8 +1,8 @@
 package com.sdl.gateway.server.handler;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.sdl.entity.Result;
-import com.sdl.utils.utils.JsonUtil;
+import com.sdl.common.entity.Result;
+import com.sdl.common.utils.utils.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
 import org.springframework.http.HttpStatus;
