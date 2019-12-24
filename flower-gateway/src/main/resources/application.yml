@@ -23,7 +23,7 @@ spring:
 
     sentinel:
       transport:
-        dashboard: localhost:8080
+        dashboard: localhost:8880
   rabbitmq:
     host: ${RABBIT_MQ_HOST:182.92.217.85}
     port: ${RABBIT_MQ_PORT:5672}

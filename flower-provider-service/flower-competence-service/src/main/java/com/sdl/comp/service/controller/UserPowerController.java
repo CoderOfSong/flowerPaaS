@@ -32,13 +32,13 @@ import java.util.List;
 @RestController
 @Slf4j
 public class UserPowerController {
-    @Resource
+    @Autowired
     private UserRepository userRepository;
 
-    @Resource
+    @Autowired
     private RoleRepository roleRepository;
 
-    @Resource
+    @Autowired
     private MenuRepository menuRepository;
 
     private static final String CACHE_KEY = "CACHE_COMP";

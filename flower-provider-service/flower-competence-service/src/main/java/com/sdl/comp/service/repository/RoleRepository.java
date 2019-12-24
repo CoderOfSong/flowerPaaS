@@ -2,9 +2,13 @@ package com.sdl.comp.service.repository;
 
 import com.sdl.comp.service.entity.SysRole;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Component
+@Repository
 public interface RoleRepository  {
 
     /**

@@ -157,6 +157,7 @@ subprojects {
         overwrite = true
         configFile = 'src/main/resources/generatorConfig.xml'
     }
+    tasks.check.dependsOn mybatisGenerator
 
     /**
      * 添加docker插件task , 暂时不用
