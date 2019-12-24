@@ -1,4 +1,4 @@
-package com.sdl.bootadmin.server.security.config;
+package com.sdl.bootadmin.service.security.config;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.context.annotation.Configuration;

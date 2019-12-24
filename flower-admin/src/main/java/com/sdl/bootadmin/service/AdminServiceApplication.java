@@ -1,4 +1,4 @@
-package com.sdl.bootadmin.server;
+package com.sdl.bootadmin.service;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
@@ -14,8 +14,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableAdminServer
-public class AdminServerApplication {
+public class AdminServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AdminServerApplication.class, args);
+        SpringApplication.run(AdminServiceApplication.class, args);
     }
 }

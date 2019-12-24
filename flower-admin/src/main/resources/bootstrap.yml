@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: flower-admin-server
+    name: flower-admin-service
   cloud:
     nacos:
       discovery:

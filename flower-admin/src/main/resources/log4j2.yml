@@ -8,7 +8,7 @@ Configuration:
       - name: log.path
         value: /Users/songdeling/Desktop/test/logs
       - name: log.name
-        value: flower-admin-server
+        value: flower-admin-service
       - name: log.pattern
         value: "%d{yyyy-MM-dd HH:mm:ss,SSS} -%5p %pid [%15.15t] %-30.30C{1.} %50F:%5L -> %m%n"
   Appenders:
