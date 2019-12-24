@@ -1,5 +1,7 @@
 package com.sdl.auth.client;
 
+import com.sdl.auth.client.fallback.CompetenceClientFallback;
+import com.sdl.common.utils.wrapper.Wrapper;
 import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +18,11 @@ import java.util.List;
 @FeignClient(name = "flower-competence-server", fallback = CompetenceClientFallback.class)
 public interface CompetenceClient {
     @GetMapping("/getUserByUsername/{username}")
-    Result<BIConversion.User> getUserByUsernameFromUpms(@PathVariable("username") String username);
+    Wrapper<Object> getUserByUsernameFromUpms(@PathVariable("username") String username);
 
     @GetMapping("/getRoleByUserId/{userId}")
-    Result<List<Role>> getRoleByUserIdFromUpms(@PathVariable("userId") Integer userId);
+    Wrapper<Object> getRoleByUserIdFromUpms(@PathVariable("userId") Integer userId);
 
     @GetMapping("/getMenuByRoleId/{roleId}")
-    Result<List<Menu>> getMenuByRoleIdFromUpms(@PathVariable("roleId") Integer roleId);
+    Wrapper<Object> getMenuByRoleIdFromUpms(@PathVariable("roleId") Integer roleId);
 }

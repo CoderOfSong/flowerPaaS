@@ -15,10 +15,10 @@ import org.springframework.context.annotation.FilterType;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients("com.sdl.auth.client")
-@ComponentScan(basePackages = {"com.sdl.common", "com.sdl.auth"},
+@EnableFeignClients("com.sdl.auth.server.client")
+/*@ComponentScan(basePackages = {"com.sdl.common", "com.sdl.auth"},
         excludeFilters = {
-                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {ScheduleConfig.class})})
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {ScheduleConfig.class})})*/
 public class AuthServerApplication {
     public static void main(String[] args) {
         SpringApplication.run(AuthServerApplication.class, args);
