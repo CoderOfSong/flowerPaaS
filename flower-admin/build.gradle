@@ -1,4 +1,4 @@
-group 'com.sdl.server'
+group 'com.sdl.service'
 version '1.0.0'
 description '服务监控管理'
 

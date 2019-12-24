@@ -2,55 +2,24 @@ spring:
   cloud:
     gateway:
       # 配置路由规则
+        # 设置路由id
+        # 设置路由的uri
+        # 设置路由断言,代理serviceId为auth-service的/auth/路径
       routes:
-      #  - id: lion-auth
-      #    uri: lb://lion-auth
-      #    predicates:
-      #      - Path=/auth/**
-      #    filters:
-      #      - StripPrefix=1
+        - id: flower-auth-service
+          uri: lb://flower-auth
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
 
-      #  - id: lion-upms
-      #    uri: lb://lion-upms
-      #    predicates:
-      #      - Path=/upms/**
-      #    filters:
-      #      - StripPrefix=1
+        - id: flower-competence-service
+          uri: lb://flower-comp
+          predicates:
+            - Path=/comp/**
+          filters:
+            - StripPrefix=1
 
-      #  - id: lion-id
-      #    uri: lb://lion-id
-      #    predicates:
-      #      - Path=/id/**
-      #    filters:
-      #      - StripPrefix=1
-
-      #  - id: lion-bigdata
-      #    uri: lb://lion-bigdata
-      #    predicates:
-      #      - Path=/bigdata/**
-      #    filters:
-      #      - StripPrefix=1
-
-      #  - id: lion-blockchain
-      #    uri: lb://lion-blockchain
-      #    predicates:
-      #      - Path=/blockchain/**
-      #    filters:
-      #      - StripPrefix=1
-
-      #  - id: lion-demo-provider
-      #    uri: lb://lion-demo-provider
-      #    predicates:
-      #      - Path=/demo/provider/**
-      #    filters:
-      #      - StripPrefix=2
-
-      #  - id: lion-demo-consumer
-      #    uri: lb://lion-demo-consumer
-      #    predicates:
-      #      - Path=/demo/consumer/**
-      #    filters:
-      #      - StripPrefix=2
 
     sentinel:
       transport:

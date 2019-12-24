@@ -1,9 +1,9 @@
 server:
-  port: ${SERVER_PORT:8884}
+  port: ${SERVER_PORT:8885}
 
 spring:
   application:
-    name: flower-zipkin-service
+    name: flower-competence-service
   cloud:
     nacos:
       discovery:

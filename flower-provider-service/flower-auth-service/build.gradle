@@ -1,19 +1,12 @@
 group 'com.sdl.service'
 version '1.0.0'
-description '路由网关服务'
+description '权限认证服务'
 
 apply plugin: 'org.springframework.boot'
 
-configurations {
-    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
-    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
-}
-
-ext {
-    netflixServoVersion = '0.12.28'
-}
-
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
 
@@ -26,12 +19,21 @@ dependencies {
 
     //implementation 'org.springframework.boot:spring-boot-configuration-processor'
 
-    implementation project(':flower-common')
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
+
+    implementation "mysql:mysql-connector-java:${mysqlVersion}"
+    implementation "com.alibaba:druid-spring-boot-starter:${druidVersion}"
+
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 
-    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
-    implementation "com.alibaba.csp:sentinel-spring-cloud-gateway-adapter:${sentinelVersion}"
+    implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
+    implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
 
-    implementation "com.netflix.servo:servo-core:${netflixServoVersion}"    // 解决 未知的枚举常量 com.netflix.servo.annotations.DataSourceType.GAUGE
+    implementation project(':flower-common')
+    implementation project(':flower-provider-client:flower-competence-client')
 }
+

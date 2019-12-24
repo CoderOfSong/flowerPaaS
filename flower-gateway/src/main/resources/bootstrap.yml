@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: flower-gateway-server
+    name: flower-gateway-service
   cloud:
     gateway:
       discovery:

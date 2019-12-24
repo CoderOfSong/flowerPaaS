@@ -1,9 +1,14 @@
 package com.sdl.auth.client.fallback;
 
 import com.sdl.auth.client.CompetenceClient;
+import com.sdl.common.entity.Menu;
+import com.sdl.common.entity.Role;
+import com.sdl.common.entity.User;
 import com.sdl.common.utils.wrapper.WrapMapper;
 import com.sdl.common.utils.wrapper.Wrapper;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @program flowerPaaS
@@ -14,17 +19,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class CompetenceClientFallback implements CompetenceClient {
     @Override
-    public Wrapper<Object> getUserByUsernameFromUpms(String username) {
-        return WrapMapper.error("服务器开小差了~请稍后重试!");
+    public Wrapper<User> getUserByUsernameFromCTC(String username) {
+        return WrapMapper.error("用户权限管理服务开小差了~请稍后重试!");
     }
 
     @Override
-    public Wrapper<Object> getRoleByUserIdFromUpms(Integer userId) {
-        return WrapMapper.error("服务器开小差了~请稍后重试!");
+    public Wrapper<List<Role>> getRoleByUserIdFromCTC(Integer userId) {
+        return WrapMapper.error("用户权限管理服务开小差了~请稍后重试!");
     }
 
     @Override
-    public Wrapper<Object> getMenuByRoleIdFromUpms(Integer roleId) {
-        return WrapMapper.error("服务器开小差了~请稍后重试!");
+    public Wrapper<List<Menu>> getMenuByRoleIdFromCTC(Integer roleId) {
+        return WrapMapper.error("用户权限管理服务开小差了~请稍后重试!");
     }
 }
