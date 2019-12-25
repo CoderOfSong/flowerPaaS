@@ -11,10 +11,11 @@ buildscript {
         dockerVersion = '1.2'
     }
     repositories {
+        mavenLocal()
+        mavenCentral()
         maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
         maven { url "https://repo.spring.io/milestone" }
         maven { url "https://plugins.gradle.org/m2/" }
-        mavenCentral()
         //jcenter()
     }
     dependencies {
@@ -38,7 +39,7 @@ allprojects {
 
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'scala'
+    //apply plugin: 'scala'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: "com.arenagod.gradle.MybatisGenerator"    // 引入 mybatis-generator 插件
     // apply plugin: 'docker'                               // 引入 docker 插件，暂时不用
@@ -52,17 +53,17 @@ subprojects {
             java {
                 srcDirs = ['src/main/java']
             }
-            scala {
-                srcDirs = ['src/main/scala']
-            }
+            //scala {
+            //    srcDirs = ['src/main/scala']
+            //}
         }
         test {
             java {
                 srcDirs = ['src/test/java']
             }
-            scala {
-                srcDirs = ['src/test/scala']
-            }
+            //scala {
+            //    srcDirs = ['src/test/scala']
+            //}
         }
     }
 
@@ -73,7 +74,7 @@ subprojects {
         springCloudAlibabaVersion = '2.1.0.RELEASE'
         springDataVersion = '2.1.4.RELEASE'
 
-        scalaVersion = '2.11.12'
+        //scalaVersion = '2.11.12'
         jacksonVersion = '2.9.8'
         lombokVersion = '1.18.6'
         amqpVersion = '2.1.3.RELEASE'
@@ -102,6 +103,7 @@ subprojects {
     }
 
     repositories {
+        mavenLocal()
         maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
         maven { url "https://repo.spring.io/milestone" }
         maven { url "https://plugins.gradle.org/m2/" }
@@ -120,7 +122,7 @@ subprojects {
         mybatisGenerator "mysql:mysql-connector-java:${mysqlVersion}"
         mybatisGenerator "tk.mybatis:mapper:${tkMapperVersion}"
 
-        implementation "org.scala-lang:scala-library:${scalaVersion}"
+        //implementation "org.scala-lang:scala-library:${scalaVersion}"
 
         implementation 'org.springframework.boot:spring-boot-starter-undertow'
 

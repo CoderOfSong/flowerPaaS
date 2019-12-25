@@ -5,16 +5,14 @@ import com.sdl.common.utils.wrapper.Wrapper;
 import com.sdl.comp.service.entity.SysMenu;
 import com.sdl.comp.service.entity.SysRole;
 import com.sdl.comp.service.entity.SysUser;
-import com.sdl.comp.service.repository.MenuRepository;
-import com.sdl.comp.service.repository.RoleRepository;
-import com.sdl.comp.service.repository.UserRepository;
+import com.sdl.comp.service.service.IMenuService;
+import com.sdl.comp.service.service.IRoleService;
+import com.sdl.comp.service.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.data.domain.Example;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,14 +30,12 @@ import java.util.List;
 @RestController
 @Slf4j
 public class UserPowerController {
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private RoleRepository roleRepository;
-
-    @Autowired
-    private MenuRepository menuRepository;
+    @Resource
+    private IMenuService iMenuService;
+    @Resource
+    private IUserService iUserService;
+    @Resource
+    private IRoleService iRoleService;
 
     private static final String CACHE_KEY = "CACHE_COMP";
 
@@ -65,7 +61,7 @@ public class UserPowerController {
         sysUser.setUsername(username);
         sysUser.setValid(true);
 
-        SysUser user = userRepository.findOne(Example.of(sysUser)).orElse(null);
+        SysUser user = iUserService.findOne(sysUser);
 
         if (user == null) {
             log.warn("用户[" + username + "]不存在");
@@ -80,7 +76,7 @@ public class UserPowerController {
     @GetMapping("/getRoleByUserId/{userId}")
     @Cacheable(cacheNames = CACHE_KEY + "_ROLE")
     public Wrapper getRoleByUserId(@PathVariable Integer userId) {
-        List<SysRole> roleList = roleRepository.getRoleByUserId(userId);
+        List<SysRole> roleList = iRoleService.getRoleByUserId(userId);
         return WrapMapper.ok(roleList);
     }
 
@@ -89,7 +85,7 @@ public class UserPowerController {
     @GetMapping("/getMenuByRoleId/{roleId}")
     @Cacheable(cacheNames = CACHE_KEY + "_MENU")
     public Wrapper getMenuByRoleId(@PathVariable Integer roleId) {
-        List<SysMenu> menuList = menuRepository.getMenuByRoleId(roleId);
+        List<SysMenu> menuList = iMenuService.getMenuByRoleId(roleId);
         return WrapMapper.ok(menuList);
     }
 }

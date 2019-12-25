@@ -5,6 +5,9 @@ description '权限认证服务'
 apply plugin: 'org.springframework.boot'
 
 dependencies {
+    implementation project(':flower-common')
+    implementation project(':flower-provider-client:flower-competence-client')
+
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
@@ -33,7 +36,6 @@ dependencies {
     implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
     implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
 
-    implementation project(':flower-common')
-    implementation project(':flower-provider-client:flower-competence-client')
+
 }
 

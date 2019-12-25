@@ -7,14 +7,14 @@ spring:
         # 设置路由断言,代理serviceId为auth-service的/auth/路径
       routes:
         - id: flower-auth-service
-          uri: lb://flower-auth
+          uri: lb://flower-auth-service
           predicates:
             - Path=/auth/**
           filters:
             - StripPrefix=1
 
         - id: flower-competence-service
-          uri: lb://flower-comp
+          uri: lb://flower-competence-service
           predicates:
             - Path=/comp/**
           filters:

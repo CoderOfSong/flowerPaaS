@@ -1,4 +1,4 @@
-group 'com.sdl.client'
+group 'com.sdl.service'
 version '1.0.0'
 description '消费者'
 

@@ -37,7 +37,7 @@
         <!-- TkMapper插件 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <!-- <property name="mappers" value="tk.mybatis.mapper.common.Mapper,tk.mybatis.mapper.common.MySqlMapper"/> -->
-            <property name="mappers" value="com.sdl.common.base.mapper.BaseMapper"/>
+            <!--<property name="mappers" value="com.sdl.common.base.mapper.BaseMapper"/>-->
             <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
             <property name="caseSensitive" value="true"/>
             <property name="lombok" value="Getter,Setter"/>
@@ -118,7 +118,17 @@
 
         <!--</table>-->
 
-        <table tableName="test_table">
+        <table schema="" tableName="sys_menu" enableInsert="true" enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+            <!-- mysql 自增ID配置 -->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+        <table schema="" tableName="sys_user" enableInsert="true" enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+            <!-- mysql 自增ID配置 -->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+        <table schema="" tableName="sys_role" enableInsert="true" enableSelectByPrimaryKey="true" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
             <!-- mysql 自增ID配置 -->
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>

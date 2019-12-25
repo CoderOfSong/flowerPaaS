@@ -15,7 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan(basePackages = {"com.sdl.common.base.mapper", "com.sdl.comp.service..*.mapper"})
-@ComponentScan(basePackages = {"com.sdl.common", "com.sdl.comp.service"})
+@ComponentScan(basePackages = {"com.sdl.common.*", "com.sdl.comp.service.*"})
 public class CompServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(CompServiceApplication.class, args);

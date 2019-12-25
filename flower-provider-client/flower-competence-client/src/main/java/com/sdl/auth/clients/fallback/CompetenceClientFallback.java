@@ -1,11 +1,12 @@
-package com.sdl.auth.client.fallback;
+package com.sdl.auth.clients.fallback;
 
-import com.sdl.auth.client.CompetenceClient;
+import com.sdl.auth.clients.CompetenceClient;
 import com.sdl.common.entity.Menu;
 import com.sdl.common.entity.Role;
 import com.sdl.common.entity.User;
 import com.sdl.common.utils.wrapper.WrapMapper;
 import com.sdl.common.utils.wrapper.Wrapper;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

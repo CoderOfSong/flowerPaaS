@@ -1,6 +1,7 @@
 package com.sdl.auth.service.service;
 
-import com.sdl.auth.client.CompetenceClient;
+
+import com.sdl.auth.clients.CompetenceClient;
 import com.sdl.common.base.enums.ResponseStatus;
 import com.sdl.common.base.exception.BusinessException;
 import com.sdl.common.entity.Menu;
