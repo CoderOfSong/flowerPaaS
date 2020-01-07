@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sdl</groupId>
+    <artifactId>flowerPaaS</artifactId>
+    <version>1.0.0</version>
+    <modules>
+        <module>flower-admin</module>
+        <module>flower-common</module>
+        <module>flower-gateway</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.2.RELEASE</version>
+    </parent>
+
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>flowerPaaS</name>
+            <url>https://github.com/CoderOfSong/flowerPaaS</url>
+        </developer>
+    </developers>
+
+    <!-- 版本统一配置 start -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <springBootAdmin.version>2.1.2</springBootAdmin.version>
+        <springCloud.version>Greenwich.RELEASE</springCloud.version>
+        <springFramework.version>5.1.4.RELEASE</springFramework.version>
+        <springCloudAlibaba.version>2.1.1.RELEASE</springCloudAlibaba.version>
+        <springData.version>2.1.4.RELEASE</springData.version>
+        <jackson.version>2.9.8</jackson.version>
+        <lombok.version>1.18.8</lombok.version>
+        <amqp.version>2.1.3.RELEASE</amqp.version>
+        <aspectj.version>1.9.2</aspectj.version>
+        <mysql.version>8.0.13</mysql.version>
+        <mybatis-starter.version>1.2.0</mybatis-starter.version>
+        <mybatis.plus.version>2.0.7</mybatis.plus.version>
+        <mapper.version>3.4.0</mapper.version>
+        <druid.version>1.1.13</druid.version>
+        <mybatis.version>3.4.0</mybatis.version>
+        <mybatisSpring.version>1.3.2</mybatisSpring.version>
+        <tkMapper.version>4.1.2</tkMapper.version>
+        <tkMapperSpring.version>2.1.2</tkMapperSpring.version>
+        <generator.version>1.3.7</generator.version>
+        <pagehelper.version>5.1.8</pagehelper.version>
+        <pagehelperSpring.version>1.2.10</pagehelperSpring.version>
+        <redisson.version>3.10.6</redisson.version>
+        <swagger.version>2.6.1</swagger.version>
+        <sentinel.version>1.6.3</sentinel.version>
+        <oauth2.version>2.3.3.RELEASE</oauth2.version>
+        <commonsLang.version>2.6</commonsLang.version>
+        <servletApi.version>4.0.1</servletApi.version>
+        <log4j.version>2.11.1</log4j.version>
+        <httpcore.version>4.4.8</httpcore.version>
+        <hutool.version>3.2.3</hutool.version>
+        <googleFindbugs.version>3.0.0</googleFindbugs.version>
+    </properties>
+    <!-- 版本统一配置 end -->
+
+    <!-- 模块配置 start -->
+    <!--<modules></modules>-->
+    <!-- 模块配置 end -->
+
+    <!--  start -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${springBootAdmin.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${springCloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.1.RELEASE</version>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-undertow</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+            </dependency>
+            <!--添加 yml 依赖（用于识别 log4j2.yml 文件）-->
+            <dependency>
+                <groupId>com.fasterxml.jackson.dataformat</groupId>
+                <artifactId>jackson-dataformat-yaml</artifactId>
+                <version>2.9.9</version>
+            </dependency>
+           <!-- 解决 未知的枚举常量 javax.annotation.meta.When.MAYBE-->
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${googleFindbugs.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore</artifactId>
+                <version>${httpcore.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xiaoleilu</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- swagger cloud start -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!-- swagger cloud end -->
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <!--mapper-->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>1.1.1</version>
+            </dependency>
+            <!--pagehelper-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>1.3.5</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <!--  end -->
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
