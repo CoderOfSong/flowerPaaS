@@ -1,0 +1,50 @@
+spring:
+  cloud:
+    gateway:
+      # 配置路由规则
+        # 设置路由id
+        # 设置路由的uri
+        # 设置路由断言,代理serviceId为auth-service的/auth/路径
+      routes:
+        - id: flower-auth-service
+          uri: lb://flower-auth-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+        - id: flower-competence-service
+          uri: lb://flower-competence-service
+          predicates:
+            - Path=/comp/**
+          filters:
+            - StripPrefix=1
+
+
+    sentinel:
+      transport:
+        dashboard: localhost:8880
+  rabbitmq:
+    host: ${RABBIT_MQ_HOST:182.92.217.85}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_USERNAME:admin}
+    password: ${RABBIT_MQ_PASSWORD:admin}
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:8884
+    sender:
+      type: rabbit
+  redis:
+    host: ${REDIS_HOST:182.92.217.85}
+    port: ${REDIS_PORT:6379}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
