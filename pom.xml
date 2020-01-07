@@ -11,6 +11,7 @@
         <module>flower-admin</module>
         <module>flower-common</module>
         <module>flower-gateway</module>
+        <module>flower-zipkin</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -64,6 +65,7 @@
         <httpcore.version>4.4.8</httpcore.version>
         <hutool.version>3.2.3</hutool.version>
         <googleFindbugs.version>3.0.0</googleFindbugs.version>
+        <zipkin.version>2.12.3</zipkin.version>
     </properties>
     <!-- 版本统一配置 end -->
 
