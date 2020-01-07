@@ -6,7 +6,7 @@ import org.apache.http.HttpStatus;
  * @program flowerPaaS
  * @description: 统一常量池
  * @author: songdeling
- * @create: 2019/12/23 14:16
+ * @create: 2019/12/23 14:16 Add library 'Maven: org.apache.httpcomponents:httpcore:4.4.8' to classpath
  */
 public class Constant {
     public static final Boolean DEL_FALSE = false;

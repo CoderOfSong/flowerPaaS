@@ -18,7 +18,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.2.RELEASE</version>
+        <version>2.1.0.RELEASE</version>
+        <relativePath/>
     </parent>
 
     <!-- 开发者信息 -->
@@ -35,6 +36,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <springBootAdmin.version>2.1.2</springBootAdmin.version>
+        <!--<springCloud.version>Greenwich.RELEASE</springCloud.version>-->
         <springCloud.version>Greenwich.RELEASE</springCloud.version>
         <springFramework.version>5.1.4.RELEASE</springFramework.version>
         <springCloudAlibaba.version>2.1.1.RELEASE</springCloudAlibaba.version>
@@ -77,12 +79,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>de.codecentric</groupId>
-                <artifactId>spring-boot-admin-dependencies</artifactId>
-                <version>${springBootAdmin.version}</version>
-                <type>pom</type>
-            </dependency>
-            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${springCloud.version}</version>
@@ -93,6 +89,12 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>2.1.1.RELEASE</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${springBootAdmin.version}</version>
                 <type>pom</type>
             </dependency>
 

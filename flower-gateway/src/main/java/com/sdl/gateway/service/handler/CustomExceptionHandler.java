@@ -1,4 +1,4 @@
-package com.sdl.gateway.service;
+package com.sdl.gateway.service.handler;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.sdl.common.utils.utils.JsonUtil;
@@ -29,7 +29,7 @@ import java.util.Map;
  * @program flowerPaaS
  * @description: 异常处理
  * @author: songdeling
- * @create: 2019/12/23 14:53
+ * @create: 2019/12/23 14:53 Add library 'Maven: ' to classpath
  */
 @Slf4j
 public class CustomExceptionHandler implements ErrorWebExceptionHandler {
