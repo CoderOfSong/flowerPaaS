@@ -48,3 +48,5 @@ management:
   endpoint:
     health:
       show-details: always
+
+debug: true

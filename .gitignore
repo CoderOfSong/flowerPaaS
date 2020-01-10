@@ -8,6 +8,8 @@
 *.bak
 *.bak1
 
+*.iml
+
 # BlueJ files
 *.ctxt
 

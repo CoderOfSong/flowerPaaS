@@ -39,7 +39,7 @@
         <!--<springCloud.version>Greenwich.RELEASE</springCloud.version>-->
         <springCloud.version>Greenwich.RELEASE</springCloud.version>
         <springFramework.version>5.1.4.RELEASE</springFramework.version>
-        <springCloudAlibaba.version>2.1.1.RELEASE</springCloudAlibaba.version>
+        <springCloudAlibaba.version>2.1.0.RELEASE</springCloudAlibaba.version>
         <springData.version>2.1.4.RELEASE</springData.version>
         <jackson.version>2.9.8</jackson.version>
         <lombok.version>1.18.8</lombok.version>
@@ -88,7 +88,7 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.1.RELEASE</version>
+                <version>${springCloudAlibaba.version}</version>
                 <type>pom</type>
             </dependency>
             <dependency>

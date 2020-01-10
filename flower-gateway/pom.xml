@@ -23,10 +23,10 @@
     </developers>
 
     <dependencies>
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>-->
+        </dependency>
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -72,10 +72,10 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
             <!-- 排除 spring-boot-starter-web和spring-boot-starter-webflux依赖,解决modifyRequestBodyGatewayFilterFactory找不到servercodeConfigurer类型参数 -->
             <exclusions>
-                <exclusion>
+                <!--<exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-web</artifactId>
-                </exclusion>
+                </exclusion>-->
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-webflux</artifactId>
