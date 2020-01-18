@@ -39,7 +39,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <springBootAdmin.version>2.1.2</springBootAdmin.version>
-        <!--<springCloud.version>Greenwich.RELEASE</springCloud.version>-->
         <springCloud.version>Greenwich.RELEASE</springCloud.version>
         <springFramework.version>5.1.4.RELEASE</springFramework.version>
         <springCloudAlibaba.version>2.1.0.RELEASE</springCloudAlibaba.version>
@@ -62,7 +61,7 @@
         <pagehelperSpring.version>1.2.10</pagehelperSpring.version>
         <redisson.version>3.10.6</redisson.version>
         <swagger.version>2.6.1</swagger.version>
-        <sentinel.version>1.6.3</sentinel.version>
+        <gatewayAdapter.version>1.6.3</gatewayAdapter.version>
         <oauth2.version>2.3.3.RELEASE</oauth2.version>
         <commonsLang.version>2.6</commonsLang.version>
         <servletApi.version>4.0.1</servletApi.version>
@@ -120,11 +119,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-log4j2</artifactId>
             </dependency>
-            <dependency>
+            <!--<dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-to-slf4j</artifactId>
                 <version>2.11.0</version>
-            </dependency>
+            </dependency>-->
             <!--添加 yml 依赖（用于识别 log4j2.yml 文件）-->
             <dependency>
                 <groupId>com.fasterxml.jackson.dataformat</groupId>

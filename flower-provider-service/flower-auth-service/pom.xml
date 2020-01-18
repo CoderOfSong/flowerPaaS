@@ -24,6 +24,55 @@
     </developers>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>${oauth2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sdl.service</groupId>
+            <artifactId>flower-urm-client</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sdl.common</groupId>
+            <artifactId>flower-common-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sdl.common</groupId>
+            <artifactId>flower-common-utils</artifactId>
+            <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jackson-mapper-asl</artifactId>
+                    <groupId>org.codehaus.jackson</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.sdl.common</groupId>
+            <artifactId>flower-common-config</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- implementation project(':flower-common')
     implementation project(':flower-provider-client:flower-competence-client')
 
@@ -41,9 +90,9 @@
 
     //implementation 'org.springframework.boot:spring-boot-configuration-processor'
 
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 
-    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2'
+
+    implementation ':'
 
     implementation "mysql:mysql-connector-java:${mysqlVersion}"
     implementation "com.alibaba:druid-spring-boot-starter:${druidVersion}"

@@ -2,12 +2,12 @@ package com.sdl.auth.service.service;
 
 
 import com.sdl.auth.clients.CompetenceClient;
+import com.sdl.common.base.entity.Menu;
+import com.sdl.common.base.entity.Role;
+import com.sdl.common.base.entity.User;
 import com.sdl.common.base.enums.ResponseStatus;
 import com.sdl.common.base.exception.BusinessException;
-import com.sdl.common.entity.Menu;
-import com.sdl.common.entity.Role;
-import com.sdl.common.entity.User;
-import com.sdl.common.utils.wrapper.Wrapper;
+import com.sdl.common.wrapper.Wrapper;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

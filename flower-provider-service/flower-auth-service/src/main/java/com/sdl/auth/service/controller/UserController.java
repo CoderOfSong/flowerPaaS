@@ -1,7 +1,7 @@
 package com.sdl.auth.service.controller;
 
-import com.sdl.common.utils.wrapper.WrapMapper;
-import com.sdl.common.utils.wrapper.Wrapper;
+import com.sdl.common.wrapper.WrapMapper;
+import com.sdl.common.wrapper.Wrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;

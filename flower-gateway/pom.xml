@@ -67,7 +67,7 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
-            <version>${sentinel.version}</version>
+            <version>${gatewayAdapter.version}</version>
         </dependency>
         <!-- 解决 未知的枚举常量 com.netflix.servo.annotations.DataSourceType.GAUGE -->
         <dependency>
