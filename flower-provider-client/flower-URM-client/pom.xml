@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>flower-provider-client</artifactId>
+        <groupId>com.sdl.service</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sdl.service</groupId>
+    <artifactId>flower-URM-client</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <!-- 开发者信息 -->
+    <developers>
+        <developer>
+            <name>flowerPaaS 用户权限管理服务消费者</name>
+            <url>https://github.com/CoderOfSong/flowerPaaS</url>
+            <email>ling.d.s@foxmail.com</email>
+        </developer>
+    </developers>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

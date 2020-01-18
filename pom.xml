@@ -12,6 +12,8 @@
         <module>flower-common</module>
         <module>flower-gateway</module>
         <module>flower-zipkin</module>
+        <module>flower-provider-service</module>
+        <module>flower-provider-client</module>
     </modules>
     <packaging>pom</packaging>
 
