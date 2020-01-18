@@ -1,4 +1,15 @@
 spring:
+  boot:
+    admin:
+      client:
+        #admin 的实例 这里用localhost，监控页面会有重复，待看
+        url: http://192.168.0.102:8883
+        username: admin
+        password: admin
+        instance:
+          #gateway 的实例
+          service-base-url: http://192.168.0.102:8882
+          service-url: http://192.168.0.102:8882
   cloud:
     gateway:
       # 配置路由规则
