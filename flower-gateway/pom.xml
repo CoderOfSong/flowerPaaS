@@ -19,6 +19,7 @@
         <developer>
             <name>flowerPaaS 路由网关服务</name>
             <url>https://github.com/CoderOfSong/flowerPaaS</url>
+            <email>ling.d.s@foxmail.com</email>
         </developer>
     </developers>
 
@@ -112,8 +113,14 @@
 
         <dependency>
             <groupId>com.sdl.common</groupId>
-            <artifactId>flower-common</artifactId>
+            <artifactId>flower-common-utils</artifactId>
             <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-webmvc</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
