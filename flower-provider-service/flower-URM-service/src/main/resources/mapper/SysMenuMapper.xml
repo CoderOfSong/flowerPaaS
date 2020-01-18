@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sdl.comp.service.mapper.SysMenuMapper">
+  <resultMap id="BaseResultMap" type="com.sdl.comp.service.entity.SysMenu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="p_id" jdbcType="VARCHAR" property="pId" />
+    <result column="p_code" jdbcType="VARCHAR" property="pCode" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="is_menu" jdbcType="BIT" property="isMenu" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="valid" jdbcType="BIT" property="valid" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+  <select id="getMenuByRoleId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT M.* FROM SYS_MENU M,SYS_ROLE_MENU RM WHERE M.ID=RM.MENU_ID AND M.VALID=1 AND RM.VALID=1 AND RM.ROLE_ID=#{id,jdbcType=INTEGER}
+  </select>
+</mapper>
