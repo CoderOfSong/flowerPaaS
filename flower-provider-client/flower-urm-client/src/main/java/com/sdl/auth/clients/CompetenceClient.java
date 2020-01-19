@@ -18,7 +18,7 @@ import java.util.List;
  * @author: songdeling
  * @create: 2019/12/25 12:46
  */
-@FeignClient(name = "flower-competence-service", fallback = CompetenceClientFallback.class)
+@FeignClient(name = "flower-urm-service", fallback = CompetenceClientFallback.class)
 public interface CompetenceClient {
     @GetMapping("/getUserByUsername/{username}")
     Wrapper<User> getUserByUsernameFromCTC(@PathVariable("username") String username);
