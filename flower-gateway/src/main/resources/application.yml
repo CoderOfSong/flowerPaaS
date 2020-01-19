@@ -58,6 +58,6 @@ management:
         include: '*'
   endpoint:
     health:
-      show-details: always
+      show-details: ALWAYS
 
 debug: true
