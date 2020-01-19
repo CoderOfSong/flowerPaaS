@@ -1,3 +1,4 @@
+/*
 package com.sdl.common.base.controller;
 
 import com.sdl.common.amqp.MessageSender;
@@ -26,57 +27,73 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+*/
 /**
  * @program flowerPaaS
  * @description: 通用控制层
  * @author: songdeling
  * @create: 2019/12/24 11:00
- */
+ *//*
+
 @RestController
 @Slf4j
 public abstract class BaseController extends ApplicationObjectSupport {
 
-    /**
+    */
+/**
      * 端口号
-     */
+     *//*
+
     @Value("${server.port}")
     protected String port;
 
-    /**
+    */
+/**
      * 应用名称（默认：flower-unknown）
-     */
+     *//*
+
     @Value("${spring.application.name}")
     protected String applicationName;
 
-    /**
+    */
+/**
      * 版本，从gateway服务发起，用于灰度（如：http://localhost:8400/demo/consumer/gray?version=1.0）
-     */
+     *//*
+
     @Value("${spring.cloud.nacos.discovery.metadata.version:1.0}")
     protected String version;
 
-    /**
+    */
+/**
      * 认证服务地址（默认：http://localhost:8888/oauth/token）
-     */
+     *//*
+
     @Value("${security.oauth2.client.access-token-uri:http://localhost:8888/oauth/token}")
     protected String authServer;
 
-    /**
+    */
+/**
      * 文件上传路径（默认：/tmp）
-     */
+     *//*
+
     @Value("${file.upload.path:/tmp}")
     protected String fileUploadPath;
 
-    /**
+    */
+/**
      * RabbitMQ 消息发送者
-     */
+     *//*
+
     @Resource
     protected MessageSender messageSender;
 
-    /**
+    */
+/**
      * 根据名称获取bean对象
      *
      * @param name 名称
-     */
+     *//*
+
     protected Object getBean(String name) {
         return this.getApplicationContext().getBean(name);
     }
@@ -91,49 +108,61 @@ public abstract class BaseController extends ApplicationObjectSupport {
         return true;
     }
 
-    /**
+    */
+/**
      * 获取request
-     */
+     *//*
+
     protected HttpServletRequest getRequest() {
         return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
     }
 
-    /**
+    */
+/**
      * 获取response
-     */
+     *//*
+
     protected HttpServletResponse getResponse() {
         return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
     }
 
-    /**
+    */
+/**
      * 获取session
-     */
+     *//*
+
     protected HttpSession getSession() {
         return getRequest().getSession();
     }
 
-    /**
+    */
+/**
      * 根据key获取request中属性值
      *
      * @param key 键
-     */
+     *//*
+
     protected Object getRequestAttribute(String key) {
         return this.getRequest().getAttribute(key);
     }
 
-    /**
+    */
+/**
      * 给request设置属性值
      *
      * @param key   键
      * @param value 值
-     */
+     *//*
+
     protected void setRequestAttribute(String key, Object value) {
         this.getRequest().setAttribute(key, value);
     }
 
-    /**
+    */
+/**
      * 文件上传（支持多个文件上传）
-     */
+     *//*
+
     protected List<String> fileUpload(HttpServletRequest request) {
 
         List<String> list = new ArrayList<>();
@@ -174,12 +203,14 @@ public abstract class BaseController extends ApplicationObjectSupport {
         return list.isEmpty() ? null : list;
     }
 
-    /**
+    */
+/**
      * 文件下载
      *
      * @param fileName 通过 upload 方法上传（文件名为时间戳）
      * @param response 响应对象
-     */
+     *//*
+
     protected boolean fileDownload(String fileName, HttpServletResponse response) {
 
         if (StringUtils.isEmpty(fileName)) {
@@ -243,3 +274,4 @@ public abstract class BaseController extends ApplicationObjectSupport {
         return false;
     }
 }
+*/

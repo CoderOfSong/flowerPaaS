@@ -24,10 +24,10 @@ spring:
           filters:
             - StripPrefix=1
 
-        - id: flower-competence-service
-          uri: lb://flower-competence-service
+        - id: flower-urm-service
+          uri: lb://flower-urm-service
           predicates:
-            - Path=/comp/**
+            - Path=/urm/**
           filters:
             - StripPrefix=1
 
