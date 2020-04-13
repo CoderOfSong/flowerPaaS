@@ -6,7 +6,6 @@ import com.sdl.common.base.entity.Role;
 import com.sdl.common.base.entity.User;
 import com.sdl.common.wrapper.WrapMapper;
 import com.sdl.common.wrapper.Wrapper;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

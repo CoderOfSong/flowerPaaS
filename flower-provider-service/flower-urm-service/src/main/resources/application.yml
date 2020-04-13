@@ -144,6 +144,13 @@ mapper:
   not-empty: true
   enum-as-simple-type: true
 
+#开启sentinel断路器
+feign:
+  sentinel:
+    enabled: true
+  httpclient:
+    enabled: true
+
 #分页插件配置
 pagehelper:
   helperDialect: mysql

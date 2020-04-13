@@ -68,41 +68,18 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-httpclient</artifactId>
+            <version>8.18.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.sdl.common</groupId>
             <artifactId>flower-common-config</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <!-- implementation project(':flower-common')
-    implementation project(':flower-provider-client:flower-competence-client')
-
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-
-    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
-    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
-
-    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
-
-    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
-
-    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
-    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
-
-    //implementation 'org.springframework.boot:spring-boot-configuration-processor'
-
-
-
-    implementation ':'
-
-    implementation "mysql:mysql-connector-java:${mysqlVersion}"
-    implementation "com.alibaba:druid-spring-boot-starter:${druidVersion}"
-
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-
-    implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
-    implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}" -->
 
     </dependencies>
 

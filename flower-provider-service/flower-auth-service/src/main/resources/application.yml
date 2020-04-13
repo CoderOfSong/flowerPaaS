@@ -125,6 +125,8 @@ spring:
 feign:
   sentinel:
     enabled: true
+  httpclient:
+    enabled: true
 
 management:
   endpoints:
